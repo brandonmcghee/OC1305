@@ -23,6 +23,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    //Week 1 AOC Project
+    
+    /*Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial
+     float value as well as the int value. */
+    
+    float angelSpeed = 100.55f;
+    
+    NSLog(@"--THE DOCTOR, RIVER, AND AMY ARE ESCAPING THE WEEPING ANGELS--");
+    NSLog(@"Doctor: River, the speed of a Weeping Angel is %f meters per second", angelSpeed);
+    NSLog(@"River: We don't have time for decimal places, can't we just say their speed is %d meters per second", (int)angelSpeed);
+    NSLog(@"Doctor: Fair enough River, but those extra decimals could be what saves your life.  Well that and never visiting a library");
+    NSLog(@"River: What?");
+    NSLog(@"Doctor: Nothing, moving on");
+    
     return YES;
 }
 
