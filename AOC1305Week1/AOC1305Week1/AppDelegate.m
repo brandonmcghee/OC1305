@@ -37,6 +37,46 @@
     NSLog(@"River: What?");
     NSLog(@"Doctor: Nothing, moving on");
     
+    /*Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in
+     all caps.
+     Use an if, else if and else check using any of the data types of your choice.
+     */
+    
+    float sonicSetting = 8.69f;
+    int doorNumber = 42;
+    bool doorLocked = YES;
+    
+    
+    NSLog(@"Doctor: Amy take the sonic screwdriver and find door 42.  River and I will hold off the angels");
+    NSLog(@"Amy: Doctor, how do I...");
+    NSLog(@"Doctor: Just make sure the setting is higher than 8 but less than 9, it will work, trust me");
+    NSLog(@"Amy: Whatever you say Doctor");
+    NSLog(@"--AMY IS SEARCHING FOR SOME DOORS");
+    NSLog(@"--AMY FOUND A DOOR--");
+    
+    if ((sonicSetting > 8) && (sonicSetting < 9))
+    {
+        NSLog(@"Amy: I hope this is the right one");
+        
+        if ((doorLocked == YES) && (doorNumber == 42))
+        {
+            NSLog(@"......SONIC MAKES WHIRRING SOUND.......");
+            NSLog(@"--AMY SONICED THE DOOR AND FOUND TARDIS--");
+            NSLog(@"Amy: Got It!");
+        }else
+        {
+            NSLog(@"--THE DOOR WAS UNLOCKED--");
+            NSLog(@"Amy: Well that was easy, DOCTOR!");
+        }
+    } else if ((sonicSetting > 9) || (sonicSetting < 8))
+    {
+        NSLog(@"--AMY NEEDS TO FIND THE CORRECT SETTING--");
+        NSLog(@"Amy: Curse this green clawed devil");
+    } else
+    {
+        NSLog(@"Amy: Blasted screwdriver never works for me, Doctor, where are you!");
+    }
+    
     return YES;
 }
 
