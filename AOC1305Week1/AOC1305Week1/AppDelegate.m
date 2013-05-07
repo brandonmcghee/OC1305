@@ -87,6 +87,37 @@
         NSLog(@"--TARDIS IS IN THE TIME VORTEX--");
         NSLog(@"...WHOOORP...");
     }
+    
+    for (int i = 0; i < 3; i++)
+    {
+        NSLog(@"--THE DOCTOR IS PILOTING THE TARDIS--");
+        
+        for (int j = 0; j < 2; j++)
+        {
+            NSLog(@"--AMY IS TRYING TO HOLD ON LIKE ALWAYS--");
+            NSLog(@"--RIVER IS SHAKING HER HEAD--");
+        }
+    }
+    
+    int landing = 10;
+    
+    NSLog(@"Doctor: Approaching the 1980s, everybody hold on!");
+    
+    while (landing > 0)
+    {
+        NSLog(@"Doctor:Landing in %d", landing);
+        landing--;
+    }
+    
+    NSLog(@"--THE TARDIS HAS LANDED--");
+    NSLog(@"--TARDIS DOOR OPENS, OUT STEPS THE DOCTOR, RIVER, AND AMY--");
+    NSLog(@"Doctor: Well, we are here");
+    NSLog(@"River: And where would here be sweetie?");
+    NSLog(@"Amy: I think its a David Bowie concert");
+    NSLog(@"Doctor: Precisely, now come along Ponds!");
+    
+    NSLog(@"--THE END--");
+
 
     return YES;
 }
