@@ -77,6 +77,17 @@
         NSLog(@"Amy: Blasted screwdriver never works for me, Doctor, where are you!");
     }
     
+    /*Perform a single for loop printing out values to the console
+     Perform a nested loop printing out values to the console
+     Perform a while loop that increments an int variable and outputs to the console.
+     */
+    
+    for (int i = 0; i < 12; i++)
+    {
+        NSLog(@"--TARDIS IS IN THE TIME VORTEX--");
+        NSLog(@"...WHOOORP...");
+    }
+
     return YES;
 }
 
