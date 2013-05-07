@@ -24,29 +24,31 @@
     [self.window makeKeyAndVisible];
     
     //Week 1 AOC Project
+    //Brandon J. McGhee
     
-    /*Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial
-     float value as well as the int value. */
+    //I am about to tell you a story that involves the BBC's fictional television show called "Doctor Who".
+    //I will be using elements from the story and mixing them into code.  I will also explain the code along the way.
     
+    //Declaration of the speed of a angelSpeed as a float
     float angelSpeed = 100.55f;
     
+    //Using NSLog to output to dialog and variable values to the console
     NSLog(@"--THE DOCTOR, RIVER, AND AMY ARE ESCAPING THE WEEPING ANGELS--");
+    //Outputting the angelSpeed to the console as a float
     NSLog(@"Doctor: River, the speed of a Weeping Angel is %f meters per second", angelSpeed);
+    //Casting angelSpeed as an integer and outputting the data, plus the dialogue to the console
     NSLog(@"River: We don't have time for decimal places, can't we just say their speed is %d meters per second", (int)angelSpeed);
+    //Continuing the story via NSLog output
     NSLog(@"Doctor: Fair enough River, but those extra decimals could be what saves your life.  Well that and never visiting a library");
     NSLog(@"River: What?");
     NSLog(@"Doctor: Nothing, moving on");
     
-    /*Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in
-     all caps.
-     Use an if, else if and else check using any of the data types of your choice.
-     */
-    
+    //Declaration of sonicSetting as float, doorNumber as integer and doorLocked as BOOL
     float sonicSetting = 8.69f;
     int doorNumber = 42;
-    bool doorLocked = YES;
+    BOOL doorLocked = YES;
     
-    
+    //Continued Dialogue using NSLog for output
     NSLog(@"Doctor: Amy take the sonic screwdriver and find door 42.  River and I will hold off the angels");
     NSLog(@"Amy: Doctor, how do I...");
     NSLog(@"Doctor: Just make sure the setting is higher than 8 but less than 9, it will work, trust me");
@@ -54,61 +56,77 @@
     NSLog(@"--AMY IS SEARCHING FOR SOME DOORS");
     NSLog(@"--AMY FOUND A DOOR--");
     
+    
+    //IF ELSE statement that is checking the sonicSetting to see if it is greater than 8 and "&&" less than 9
     if ((sonicSetting > 8) && (sonicSetting < 9))
     {
+        //Output via NSLog to console to continue the story if above statement is true
         NSLog(@"Amy: I hope this is the right one");
         
+        //Nested IF ELSE statement that checks if doorLocked is YES and "&&" doorNumber equals 42
         if ((doorLocked == YES) && (doorNumber == 42))
         {
+            //Output via NSLog to console to continue the story if above nested IF ELSE statement is true.
+            //If above statement is not true then code will procede to the else statement directly below
             NSLog(@"......SONIC MAKES WHIRRING SOUND.......");
             NSLog(@"--AMY SONICED THE DOOR AND FOUND TARDIS--");
             NSLog(@"Amy: Got It!");
         }else
         {
+            //Output via NSLog to console to continue the story if nested statement above is false
             NSLog(@"--THE DOOR WAS UNLOCKED--");
             NSLog(@"Amy: Well that was easy, DOCTOR!");
         }
-    } else if ((sonicSetting > 9) || (sonicSetting < 8))
+    } else if ((sonicSetting > 9) || (sonicSetting < 8)) //Using OR "||" to evaulate the sonicSetting
     {
+        //Output via NSLog to console to continue the story if the initial IF statement is false and the ELSE IF is true
         NSLog(@"--AMY NEEDS TO FIND THE CORRECT SETTING--");
         NSLog(@"Amy: Curse this green clawed devil");
     } else
     {
+        //Output via NSLog to contiue the story if either the initial IF statement and the ELSE IF statements are false
         NSLog(@"Amy: Blasted screwdriver never works for me, Doctor, where are you!");
     }
     
-    /*Perform a single for loop printing out values to the console
-     Perform a nested loop printing out values to the console
-     Perform a while loop that increments an int variable and outputs to the console.
-     */
-    
-    for (int i = 0; i < 12; i++)
+    //For loop checks the inVortex variable and increments until it reaches 12, showing how long the TARDIS is in the vortex
+    for (int inVortex = 0; inVortex <= 12; inVortex++)
     {
+        //Output to console via NSLog to continue the story
         NSLog(@"--TARDIS IS IN THE TIME VORTEX--");
         NSLog(@"...WHOOORP...");
     }
     
-    for (int i = 0; i < 3; i++)
+    //For loop checks to see how long the Doctor is piloting the tardis, increments until it reaches 3
+    for (int piloting = 0; piloting <= 3; piloting++)
     {
+        //Output to console via NSLog to continue the story
         NSLog(@"--THE DOCTOR IS PILOTING THE TARDIS--");
         
-        for (int j = 0; j < 2; j++)
+        //Nested For loop checks to see what Amy and River are doing, checks hangon and increments until it reaches 2
+        for (int hangon = 0; hangon <= 2; hangon++)
         {
+            //Output to console via NSLog to contiunue the story
             NSLog(@"--AMY IS TRYING TO HOLD ON LIKE ALWAYS--");
             NSLog(@"--RIVER IS SHAKING HER HEAD--");
         }
     }
     
+    //Declaration of landing variable as integer, to be used in following while loop to see if TARDIS has landed
     int landing = 10;
     
+    //Output to console via NSLog to continue the story
     NSLog(@"Doctor: Approaching the 1980s, everybody hold on!");
     
+    //While loop evaluating landing integer variable, continues while landing is greater than 0
     while (landing > 0)
     {
+        //Output to console via NSLog to contiue the story
         NSLog(@"Doctor:Landing in %d", landing);
+        //Decrementing the landing integer variable each time the loop runs, if not the TARDIS would be in an infinite loop!
         landing--;
     }
     
+    //Finale of the story, of course using NSLog and outputting to the console
     NSLog(@"--THE TARDIS HAS LANDED--");
     NSLog(@"--TARDIS DOOR OPENS, OUT STEPS THE DOCTOR, RIVER, AND AMY--");
     NSLog(@"Doctor: Well, we are here");
