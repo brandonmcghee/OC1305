@@ -27,32 +27,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    //Week 2 Project AOC1305
-    //Book is "Lamb" by Christopher Moore
-    
-    //Array that holds the elements of the story.
-    NSArray *storyElements = [[NSArray alloc] initWithObjects:@"wise men", @"journey",@"stupid angel", @"biff", @"joshua", nil];
-    
-    NSMutableString *listOfItems = [[NSMutableString alloc] initWithCapacity:5];
-    
-    for (int i=0; i<[storyElements count]; i++)
-    {
-        if (i == 4)
-        {
-            [listOfItems appendString:@" and "];
-            [listOfItems appendString:[storyElements objectAtIndex:i]];
-        }else if (i == 0)
-        {
-            [listOfItems appendString:[storyElements objectAtIndex:i]];
-        }else
-        {
-            [listOfItems appendString:@","];
-            [listOfItems appendString:[storyElements objectAtIndex:i]];
-        }
 
-    }
-    
-    NSLog(@"%@", listOfItems);
     
     return YES;
 }

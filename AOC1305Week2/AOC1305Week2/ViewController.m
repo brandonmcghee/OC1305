@@ -16,6 +16,34 @@
 
 - (void)viewDidLoad
 {
+    
+    //Week 2 Project AOC1305
+    //Book is "Lamb" by Christopher Moore
+    
+    //Array that holds the elements of the story.
+    NSArray *storyElements = [[NSArray alloc] initWithObjects:@"wise men", @"journey",@"stupid angel", @"biff", @"joshua", nil];
+    
+    NSMutableString *listOfItems = [[NSMutableString alloc] initWithCapacity:5];
+    
+    for (int i=0; i<[storyElements count]; i++)
+    {
+        if (i == 4)
+        {
+            [listOfItems appendString:@" and "];
+            [listOfItems appendString:[storyElements objectAtIndex:i]];
+        }else if (i == 0)
+        {
+            [listOfItems appendString:[storyElements objectAtIndex:i]];
+        }else
+        {
+            [listOfItems appendString:@","];
+            [listOfItems appendString:[storyElements objectAtIndex:i]];
+        }
+        
+    }
+    
+    NSLog(@"%@", listOfItems);
+    
     bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 20.0f)];
 
     bookTitle.text = @"Lamb";
@@ -52,6 +80,7 @@
     labelSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 75.0f, 100.0f, 20.0f)];
     
     labelSummary.text = @"Summary:";
+    labelSummary.textAlignment = UITextAlignmentLeft;
     labelSummary.backgroundColor = [UIColor redColor];
     
     bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 150.0f)];
@@ -65,11 +94,14 @@
     labelListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 260.0f, 100.0f, 20.0f)];
     
     labelListOfItems.text = @"List of Items:";
+    labelListOfItems.textAlignment = UITextAlignmentLeft;
     labelListOfItems.backgroundColor = [UIColor redColor];
     
-    bookListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 290.0f, 320.0f, 20.0f)];
+    bookListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 290.0f, 320.0f, 50.0f)];
     
-    //bookListOfItems.text = listOfItems;
+    bookListOfItems.text = listOfItems;
+    bookListOfItems.numberOfLines = 3;
+    bookListOfItems.textAlignment = UITextAlignmentCenter;
     bookListOfItems.backgroundColor = [UIColor blueColor];
     bookListOfItems.textColor = [UIColor whiteColor];
 
