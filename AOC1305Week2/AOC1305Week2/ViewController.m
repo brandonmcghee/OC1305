@@ -26,22 +26,26 @@
     labelAuthor = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 25.0f, 100.0f, 20.0f)];
     
     labelAuthor.text = @"Author:";
+    labelAuthor.textAlignment = UITextAlignmentRight;
     labelAuthor.backgroundColor = [UIColor redColor];
     
     bookAuthor = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 25.0f, 280.0f, 20.0f)];
     
     bookAuthor.text = @"Christopher Moore";
     bookAuthor.backgroundColor = [UIColor blueColor];
+    bookAuthor.textAlignment = UITextAlignmentLeft;
     bookAuthor.textColor = [UIColor whiteColor];
     
     labelPublished = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 100.0f, 20.0f)];
     
     labelPublished.text = @"Published:";
+    labelPublished.textAlignment = UITextAlignmentLeft;
     labelPublished.backgroundColor = [UIColor redColor];
     
     bookPublished = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 50.0f, 280.0f, 20.0f)];
     
     bookPublished.text = @"2002";
+    bookPublished.textAlignment = UITextAlignmentLeft;
     bookPublished.backgroundColor = [UIColor blueColor];
     bookPublished.textColor = [UIColor whiteColor];
     
@@ -65,7 +69,7 @@
     
     bookListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 290.0f, 320.0f, 20.0f)];
     
-    bookListOfItems.text = [NSMutableString mutableString];
+    //bookListOfItems.text = listOfItems;
     bookListOfItems.backgroundColor = [UIColor blueColor];
     bookListOfItems.textColor = [UIColor whiteColor];
 

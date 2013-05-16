@@ -41,6 +41,9 @@
         {
             [listOfItems appendString:@" and "];
             [listOfItems appendString:[storyElements objectAtIndex:i]];
+        }else if (i == 0)
+        {
+            [listOfItems appendString:[storyElements objectAtIndex:i]];
         }else
         {
             [listOfItems appendString:@","];
