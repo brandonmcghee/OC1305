@@ -19,6 +19,7 @@
     UILabel *labelPublished;
     UILabel *labelSummary;
     UILabel *labelListOfItems;
+    
 }
 
 
