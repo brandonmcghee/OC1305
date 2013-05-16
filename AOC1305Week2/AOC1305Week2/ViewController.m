@@ -16,14 +16,55 @@
 
 - (void)viewDidLoad
 {
-    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
-    if (label1 != nil)
-    {
-        label1.text = @"This is my label text";
-        label1.backgroundColor = [UIColor redColor];
-        
-    }
-    [self.view addSubview:label1];
+    bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 20.0f)];
+
+    bookTitle.text = @"Lamb";
+    bookTitle.backgroundColor = [UIColor redColor];
+    bookTitle.textColor = [UIColor whiteColor];
+    bookTitle.textAlignment = UITextAlignmentCenter;
+    
+    labelAuthor = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 25.0f, 100.0f, 20.0f)];
+    
+    labelAuthor.text = @"Author:";
+    labelAuthor.backgroundColor = [UIColor redColor];
+    
+    bookAuthor = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 25.0f, 280.0f, 20.0f)];
+    
+    bookAuthor.text = @"Christopher Moore";
+    bookAuthor.backgroundColor = [UIColor blueColor];
+    bookAuthor.textColor = [UIColor whiteColor];
+    
+    labelPublished = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 100.0f, 20.0f)];
+    
+    labelPublished.text = @"Published:";
+    labelPublished.backgroundColor = [UIColor redColor];
+    
+    bookPublished = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 50.0f, 280.0f, 20.0f)];
+    
+    bookPublished.text = @"2002";
+    bookPublished.backgroundColor = [UIColor blueColor];
+    bookPublished.textColor = [UIColor whiteColor];
+    
+    labelSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 75.0f, 100.0f, 20.0f)];
+    
+    labelSummary.text = @"Summary:";
+    labelSummary.backgroundColor = [UIColor redColor];
+    
+    bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 200.0f)];
+    
+    bookSummary.text = @"The life of adult life of Jesus Christ is always talked about.  However there is very little information on his childhood until he reaches 30.  That is where Christ's best pal Biff comes in.  Lambe is about the life of Jesus and Biff from the ages of 7 to 30.";
+    bookSummary.numberOfLines = 7;
+    bookSummary.backgroundColor = [UIColor redColor];
+    bookSummary.textColor = [UIColor whiteColor];
+    bookSummary.textAlignment = UITextAlignmentCenter;
+
+    [self.view addSubview:bookTitle];
+    [self.view addSubview:labelAuthor];
+    [self.view addSubview:bookAuthor];
+    [self.view addSubview:labelPublished];
+    [self.view addSubview:bookPublished];
+    [self.view addSubview:labelSummary];
+    [self.view addSubview:bookSummary];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
