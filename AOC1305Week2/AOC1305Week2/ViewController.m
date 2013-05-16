@@ -50,13 +50,24 @@
     labelSummary.text = @"Summary:";
     labelSummary.backgroundColor = [UIColor redColor];
     
-    bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 200.0f)];
+    bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 150.0f)];
     
-    bookSummary.text = @"The life of adult life of Jesus Christ is always talked about.  However there is very little information on his childhood until he reaches 30.  That is where Christ's best pal Biff comes in.  Lambe is about the life of Jesus and Biff from the ages of 7 to 30.";
+    bookSummary.text = @"The adult life of Jesus Christ is always talked about.  However there is very little information on his childhood until he reaches 30.  That is where Christ's best pal Biff comes in.  Lamb is about the life of Jesus and Biff from the ages of 7 to 30.";
     bookSummary.numberOfLines = 7;
     bookSummary.backgroundColor = [UIColor redColor];
     bookSummary.textColor = [UIColor whiteColor];
     bookSummary.textAlignment = UITextAlignmentCenter;
+    
+    labelListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 260.0f, 100.0f, 20.0f)];
+    
+    labelListOfItems.text = @"List of Items:";
+    labelListOfItems.backgroundColor = [UIColor redColor];
+    
+    bookListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 290.0f, 320.0f, 20.0f)];
+    
+    bookListOfItems.text = [NSMutableString mutableString];
+    bookListOfItems.backgroundColor = [UIColor blueColor];
+    bookListOfItems.textColor = [UIColor whiteColor];
 
     [self.view addSubview:bookTitle];
     [self.view addSubview:labelAuthor];
@@ -65,6 +76,9 @@
     [self.view addSubview:bookPublished];
     [self.view addSubview:labelSummary];
     [self.view addSubview:bookSummary];
+    [self.view addSubview:labelListOfItems];
+    [self.view addSubview:bookListOfItems];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

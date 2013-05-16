@@ -14,9 +14,11 @@
     UILabel *bookAuthor;
     UILabel *bookPublished;
     UILabel *bookSummary;
+    UILabel *bookListOfItems;
     UILabel *labelAuthor;
     UILabel *labelPublished;
     UILabel *labelSummary;
+    UILabel *labelListOfItems;
 }
 
 
