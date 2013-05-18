@@ -17,7 +17,7 @@
                BlueprintIdentifier = "368EBE221741A2FC00276004"
                BuildableName = "AOC1305Week2.app"
                BlueprintName = "AOC1305Week2"
-               ReferencedContainer = "container:AOC1305Week2.xcodeproj">
+               ReferencedContainer = "container:testApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "368EBE221741A2FC00276004"
             BuildableName = "AOC1305Week2.app"
             BlueprintName = "AOC1305Week2"
-            ReferencedContainer = "container:AOC1305Week2.xcodeproj">
+            ReferencedContainer = "container:testApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -54,7 +54,7 @@
             BlueprintIdentifier = "368EBE221741A2FC00276004"
             BuildableName = "AOC1305Week2.app"
             BlueprintName = "AOC1305Week2"
-            ReferencedContainer = "container:AOC1305Week2.xcodeproj">
+            ReferencedContainer = "container:testApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -72,7 +72,7 @@
             BlueprintIdentifier = "368EBE221741A2FC00276004"
             BuildableName = "AOC1305Week2.app"
             BlueprintName = "AOC1305Week2"
-            ReferencedContainer = "container:AOC1305Week2.xcodeproj">
+            ReferencedContainer = "container:testApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

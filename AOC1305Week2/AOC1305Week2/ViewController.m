@@ -39,7 +39,7 @@
             [listOfItems appendString:[storyElements objectAtIndex:i]];
         }else
         {
-            [listOfItems appendString:@","];
+            [listOfItems appendString:@", "];
             [listOfItems appendString:[storyElements objectAtIndex:i]];
         }
         
@@ -58,7 +58,7 @@
     bookTitle.text = @"Lamb";
     bookTitle.backgroundColor = [UIColor darkGrayColor];
     bookTitle.textColor = [UIColor greenColor];
-    bookTitle.textAlignment = UITextAlignmentCenter;
+    bookTitle.textAlignment = NSTextAlignmentCenter;
     
     //Initializing the label for labelAuthor
     labelAuthor = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 25.0f, 100.0f, 20.0f)];
@@ -67,7 +67,7 @@
     labelAuthor.text = @"Author:";
     labelAuthor.backgroundColor = [UIColor lightGrayColor];
     labelAuthor.textColor = [UIColor blueColor];
-    labelAuthor.textAlignment = UITextAlignmentRight;
+    labelAuthor.textAlignment = NSTextAlignmentRight;
 
     //Initializing the label for bookAuthor
     bookAuthor = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 25.0f, 280.0f, 20.0f)];
@@ -76,7 +76,7 @@
     bookAuthor.text = @"Christopher Moore";
     bookAuthor.backgroundColor = [UIColor grayColor];
     bookAuthor.textColor = [UIColor yellowColor];
-    bookAuthor.textAlignment = UITextAlignmentLeft;
+    bookAuthor.textAlignment = NSTextAlignmentLeft;
 
     //Initializing the label for labelPublished
     labelPublished = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 100.0f, 20.0f)];
@@ -85,14 +85,14 @@
     labelPublished.text = @"Published:";
     labelPublished.backgroundColor = [UIColor brownColor];
     labelPublished.textColor = [UIColor whiteColor];
-    labelPublished.textAlignment = UITextAlignmentLeft;
+    labelPublished.textAlignment = NSTextAlignmentLeft;
 
     //Initializing the label for bookPublished
     bookPublished = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 50.0f, 280.0f, 20.0f)];
     
     //Setting values, colors and alignment for the bookPublished label
     bookPublished.text = @"2002";
-    bookPublished.textAlignment = UITextAlignmentLeft;
+    bookPublished.textAlignment = NSTextAlignmentLeft;
     bookPublished.backgroundColor = [UIColor magentaColor];
     bookPublished.textColor = [UIColor cyanColor];
     
@@ -103,7 +103,7 @@
     labelSummary.text = @"Summary:";
     labelSummary.backgroundColor = [UIColor purpleColor];
     labelSummary.textColor = [UIColor orangeColor];
-    labelSummary.textAlignment = UITextAlignmentLeft;
+    labelSummary.textAlignment = NSTextAlignmentLeft;
     
     //Initializing the label for bookSummary
     bookSummary = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 150.0f)];
@@ -113,7 +113,7 @@
     bookSummary.numberOfLines = 7;
     bookSummary.backgroundColor = [UIColor redColor];
     bookSummary.textColor = [UIColor whiteColor];
-    bookSummary.textAlignment = UITextAlignmentCenter;
+    bookSummary.textAlignment = NSTextAlignmentCenter;
     
     //Initializing the label for labelListOfItems
     labelListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 260.0f, 100.0f, 20.0f)];
@@ -122,7 +122,7 @@
     labelListOfItems.text = @"List of Items:";
     labelListOfItems.textColor = [UIColor colorWithRed:1 green:0.757 blue:0.145 alpha:1];
     labelListOfItems.backgroundColor = [UIColor colorWithRed:0.275 green:0.51 blue:0.706 alpha:1];
-    labelListOfItems.textAlignment = UITextAlignmentLeft;
+    labelListOfItems.textAlignment = NSTextAlignmentLeft;
     
     //Initializing the label for bookListOfItems
     bookListOfItems = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 290.0f, 320.0f, 50.0f)];
@@ -130,7 +130,7 @@
     //Setting values, colors and alignment for the bookListOfItems label
     bookListOfItems.text = listOfItems;
     bookListOfItems.numberOfLines = 3;
-    bookListOfItems.textAlignment = UITextAlignmentCenter;
+    bookListOfItems.textAlignment = NSTextAlignmentCenter;
     bookListOfItems.backgroundColor = [UIColor colorWithRed:0.596 green:0.984 blue:0.596 alpha:1];
     bookListOfItems.textColor = [UIColor colorWithRed:0.365 green:0.278 blue:0.545 alpha:1];
 

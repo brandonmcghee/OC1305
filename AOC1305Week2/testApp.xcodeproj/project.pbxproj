@@ -136,7 +136,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Brandon McGhee";
 			};
-			buildConfigurationList = 368EBE1E1741A2FC00276004 /* Build configuration list for PBXProject "AOC1305Week2" */;
+			buildConfigurationList = 368EBE1E1741A2FC00276004 /* Build configuration list for PBXProject "testApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -261,7 +261,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOC1305Week2/AOC1305Week2-Prefix.pch";
 				INFOPLIST_FILE = "AOC1305Week2/AOC1305Week2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -272,7 +274,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOC1305Week2/AOC1305Week2-Prefix.pch";
 				INFOPLIST_FILE = "AOC1305Week2/AOC1305Week2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -280,7 +284,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		368EBE1E1741A2FC00276004 /* Build configuration list for PBXProject "AOC1305Week2" */ = {
+		368EBE1E1741A2FC00276004 /* Build configuration list for PBXProject "testApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				368EBE441741A2FC00276004 /* Debug */,
@@ -296,6 +300,7 @@
 				368EBE481741A2FC00276004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
