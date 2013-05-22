@@ -29,12 +29,18 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    
-    
     int returnValue = [self.viewController add:10 second:5];
+    BOOL areTheseEqual = [self.viewController valuesEqual:2 second:9];
     
     NSLog(@"The return value is %d", returnValue);
     
+    if (areTheseEqual == TRUE) {
+        NSLog(@"The values are equal!");
+    }else if (areTheseEqual == FALSE){
+        NSLog(@"The values are NOT equal!");
+    }else {
+        NSLog(@"Error, could not tell if values are equal");
+    }
     
     return YES;
 }

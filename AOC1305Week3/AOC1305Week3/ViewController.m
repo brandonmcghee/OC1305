@@ -41,4 +41,14 @@
     
 }
 
+- (BOOL)valuesEqual:(NSInteger)first second:(NSInteger)second
+{
+    if (first == second)
+    {
+        return true;
+    }else{
+        return false;
+    }
+}
+
 @end
