@@ -51,4 +51,22 @@
     }
 }
 
+- (NSString*)Append:(NSString*)first second:(NSString*)second
+{
+    NSMutableString *appended = [[NSMutableString alloc]init];
+    
+    [appended appendString:first];
+    [appended appendString:second];
+    
+    return appended;
+    
+}
+
+- (UIAlertView*)displayAlertWithString:(NSString*) theString
+{
+    UIAlertView *stringAlert = [[UIAlertView alloc] initWithTitle:@"Appended String" message:theString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    
+    return stringAlert;
+}
+
 @end

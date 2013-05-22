@@ -15,5 +15,7 @@
 
 - (int)add: (NSInteger)first second:(NSInteger)second;
 - (BOOL)valuesEqual:(NSInteger)first second:(NSInteger)second;
+- (NSString*)Append:(NSString*)first second:(NSString*)second;
+- (UIAlertView*)displayAlertWithString:(NSString*) theString;
 
 @end

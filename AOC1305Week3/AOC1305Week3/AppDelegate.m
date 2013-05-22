@@ -31,6 +31,10 @@
     
     int returnValue = [self.viewController add:10 second:5];
     BOOL areTheseEqual = [self.viewController valuesEqual:2 second:9];
+    NSString *stringAppend = [self.viewController Append:@"the first and " second:@" the last"];
+    UIAlertView *theAlert = [self.viewController displayAlertWithString:stringAppend];
+    
+
     
     NSLog(@"The return value is %d", returnValue);
     
@@ -41,6 +45,8 @@
     }else {
         NSLog(@"Error, could not tell if values are equal");
     }
+    
+    [theAlert show];
     
     return YES;
 }
