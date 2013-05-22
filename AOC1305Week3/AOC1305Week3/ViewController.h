@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+   
+}
+
+- (int)add: (NSInteger)first second:(NSInteger)second;
 
 @end
