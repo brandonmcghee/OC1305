@@ -62,11 +62,28 @@
     
 }
 
-- (UIAlertView*)displayAlertWithString:(NSString*) theString
+- (UIAlertView*)displayAlertWithString:(NSString*)theString firstFactor:(int)firstFactor secondFactor:(int)secondFactor
 {
-    UIAlertView *stringAlert = [[UIAlertView alloc] initWithTitle:@"Appended String" message:theString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    if (firstFactor == 0 || secondFactor == 0)
+    {
+        UIAlertView *stringAlert = [[UIAlertView alloc] initWithTitle:@"AOC1305 Week 3" message:theString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
+        return stringAlert;
+    }
+    
+    if (firstFactor == secondFactor)
+    {
+        theString = [NSString stringWithFormat:@"YES! %d and %d are equal", (int)firstFactor, (int)secondFactor];
+    }else if (firstFactor != secondFactor)
+    {
+        theString = [NSString stringWithFormat:@"NO! %d and %d are NOT equal", (NSInteger)firstFactor, (NSInteger)secondFactor];
+    }
+    
+    UIAlertView *stringAlert = [[UIAlertView alloc] initWithTitle:@"AOC1305 Week 3" message:theString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     return stringAlert;
 }
+
+
 
 @end

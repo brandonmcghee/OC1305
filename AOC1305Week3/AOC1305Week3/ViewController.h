@@ -16,6 +16,6 @@
 - (int)add: (NSInteger)first second:(NSInteger)second;
 - (BOOL)valuesEqual:(NSInteger)first second:(NSInteger)second;
 - (NSString*)Append:(NSString*)first second:(NSString*)second;
-- (UIAlertView*)displayAlertWithString:(NSString*) theString;
+- (UIAlertView*)displayAlertWithString:(NSString*) theString firstFactor:(int)firstFactor secondFactor:(int)secondFactor;
 
 @end

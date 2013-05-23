@@ -29,24 +29,29 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
+    int firstValue = 9;
+    int secondValue = 10;
+    NSString *equalString;
+    
     int returnValue = [self.viewController add:10 second:5];
-    BOOL areTheseEqual = [self.viewController valuesEqual:2 second:9];
-    NSString *stringAppend = [self.viewController Append:@"the first and " second:@" the last"];
-    UIAlertView *theAlert = [self.viewController displayAlertWithString:stringAppend];
+    BOOL areTheseEqual = [self.viewController valuesEqual:9 second:9];
+    NSNumber *intToAppend = [[NSNumber alloc] initWithInteger:returnValue];
+    NSString *stringAppend = [NSString stringWithFormat:@"The number is %d", [intToAppend intValue]];
+    UIAlertView *conCatAlert = [self.viewController displayAlertWithString:stringAppend firstFactor:0 secondFactor:0];
     
-
+    [conCatAlert show];
     
-    NSLog(@"The return value is %d", returnValue);
-    
-    if (areTheseEqual == TRUE) {
-        NSLog(@"The values are equal!");
-    }else if (areTheseEqual == FALSE){
-        NSLog(@"The values are NOT equal!");
-    }else {
-        NSLog(@"Error, could not tell if values are equal");
+    if (areTheseEqual == TRUE)
+    {
+        equalString = @"YES";
+    }else
+    {
+        equalString = @"NO";
     }
     
-    [theAlert show];
+    UIAlertView *equalAlert = [self.viewController displayAlertWithString:equalString firstFactor:firstValue secondFactor:secondValue];
+
+    [equalAlert show];
     
     return YES;
 }
