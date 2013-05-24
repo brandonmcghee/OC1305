@@ -25,33 +25,32 @@
     // Override point for customization after application launch.
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
     
-    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    int firstValue = 9;
-    int secondValue = 10;
-    NSString *equalString;
+    int firstValue = 10;
+    int secondValue = 11;
     
-    int returnValue = [self.viewController add:10 second:5];
-    BOOL areTheseEqual = [self.viewController valuesEqual:9 second:9];
+    int returnValue = [self.viewController add:firstValue second:secondValue];
+    BOOL areTheseEqual = [self.viewController valuesEqual:firstValue second:secondValue];
     NSNumber *intToAppend = [[NSNumber alloc] initWithInteger:returnValue];
-    NSString *stringAppend = [NSString stringWithFormat:@"The number is %d", [intToAppend intValue]];
-    UIAlertView *conCatAlert = [self.viewController displayAlertWithString:stringAppend firstFactor:0 secondFactor:0];
-    
-    [conCatAlert show];
-    
+    NSString *stringNumberIs = [NSString stringWithFormat:@"The number is %d", [intToAppend intValue]];
+    NSString *stringNumbersAre;
+    UIAlertView *equalAlert;
+    UIAlertView *conCatAlert;
+
     if (areTheseEqual == TRUE)
     {
-        equalString = @"YES";
+        stringNumbersAre = [NSString stringWithFormat:@"%d and %d are equal!", firstValue, secondValue];
     }else
     {
-        equalString = @"NO";
+        stringNumbersAre = [NSString stringWithFormat:@"%d and %d are NOT equal!", firstValue, secondValue];
     }
     
-    UIAlertView *equalAlert = [self.viewController displayAlertWithString:equalString firstFactor:firstValue secondFactor:secondValue];
-
+    equalAlert = [self.viewController displayAlertWithString:stringNumberIs];
     [equalAlert show];
+    conCatAlert = [self.viewController displayAlertWithString:stringNumbersAre];
+    [conCatAlert show];
     
     return YES;
 }
