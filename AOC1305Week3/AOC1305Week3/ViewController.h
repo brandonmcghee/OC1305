@@ -10,9 +10,10 @@
 
 @interface ViewController : UIViewController
 {
-   
+
 }
 
+//Declaration of functions in ViewController so they may be accessed from anywhere that imports this header file
 - (int)add: (NSInteger)first second:(NSInteger)second;
 - (BOOL)valuesEqual:(NSInteger)first second:(NSInteger)second;
 - (NSString*)Append:(NSString*)first second:(NSString*)second;

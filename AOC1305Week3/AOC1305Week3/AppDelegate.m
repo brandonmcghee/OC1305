@@ -28,17 +28,29 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
+    //Brandon McGhee AOC1305
+    //Week 3 Project
+    
+    //Int variable to compare and display
     int firstValue = 10;
     int secondValue = 11;
     
+    //Return value function call to add firstValue and secondValue together and return result
     int returnValue = [self.viewController add:firstValue second:secondValue];
+    //BOOL value to see if firstValue and Second Value are equal, returns TRUE or FALSE
     BOOL areTheseEqual = [self.viewController valuesEqual:firstValue second:secondValue];
+    //Placing returnValue integer into an NSNumber so it can be put into an NSString
     NSNumber *intToAppend = [[NSNumber alloc] initWithInteger:returnValue];
+    //NSString variable that will display the intToAppend which contains the sum of firstValue and secondValue
     NSString *stringNumberIs = [NSString stringWithFormat:@"The number is %d", [intToAppend intValue]];
+    //NSString variable that will contain firstValue and secondValue so they can be displayed in the alert view
     NSString *stringNumbersAre;
+    
+    //Pop up alert box declaration
     UIAlertView *equalAlert;
     UIAlertView *conCatAlert;
-
+    
+    //Logic statement to see if the BOOl areTheseEqual is true or false, and assign the value to stringNumbersAre so it may be displayed
     if (areTheseEqual == TRUE)
     {
         stringNumbersAre = [NSString stringWithFormat:@"%d and %d are equal!", firstValue, secondValue];
@@ -47,9 +59,13 @@
         stringNumbersAre = [NSString stringWithFormat:@"%d and %d are NOT equal!", firstValue, secondValue];
     }
     
+    //View Controller setup for the UIAlertView
     equalAlert = [self.viewController displayAlertWithString:stringNumberIs];
+    //Displaying Alert View
     [equalAlert show];
+    //View Controller setup for the UIAlertView
     conCatAlert = [self.viewController displayAlertWithString:stringNumbersAre];
+    //Displaying Alert View
     [conCatAlert show];
     
     return YES;
