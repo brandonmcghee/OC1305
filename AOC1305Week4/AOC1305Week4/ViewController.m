@@ -12,6 +12,7 @@
 #define BTN_DATE 0
 #define BTN_LOGIN 1
 #define BTN_INFO 2
+#define BTN_INPUTFOCUS 3
 
 @interface ViewController ()
 
@@ -51,7 +52,10 @@
     
     //Text Input for "Username:" label
     inputName                   =   [[UITextField alloc] initWithFrame:CGRectMake(90.0f, 10.0f, deviceWidth/1.5, 31.0f)];
+                                    [inputName addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventAllTouchEvents];
                                     [inputName setBorderStyle:(UITextBorderStyleRoundedRect)];
+                                    inputName.tag = BTN_INPUTFOCUS;
+    
     
     //String for User Name
     userName                    =   [[NSString alloc]init];
@@ -115,25 +119,26 @@
 {   
     switch (button.tag)
     {
+        //Case 0 shows the current date, which is formatted
         case 0:
     
             [alertDate show];
         
         break;
-            
+        
+        //Case 1 is used when the login button is clicked
         case 1:
             //Hides the keyboard when login button is clicked
             [inputName resignFirstResponder];
-            
-            //Assigning value of inputName.text into userName
-            userName        =       [NSString stringWithFormat:@"User: %@ has been logged in", inputName.text];
-
+    
             //Logic statement to check if userName has any input
-            if (inputName.text == 0)
+            if ([inputName.text isEqual: @""])
             {
                 [alertError show];
             }else if (inputName.text != 0)
             {
+                //Assigning value of inputName.text into userName
+                userName        =       [NSString stringWithFormat:@"User: %@ has been logged in", inputName.text];
                 labelPEName.text = userName;
                 NSLog(@"%@",userName);
                 labelPEName.text = userName;
@@ -142,8 +147,10 @@
             }
         
         break;
-            
+        
+        //Case 2 is used when the info button is clicked
         case 2:
+            //Checks to see if info text is already displayed, can turn it on and off
             if (infoOn)
             {
                 labelCredits.text   =   @"";
@@ -155,6 +162,12 @@
             
         break;
 
+        //Case 3 is used when focus (someones finger touches) to the user name input box, it clears the text of the input name box and changes the label text back to enter a username
+        case 3:
+            inputName.text = @"";
+            labelPEName.text = @"Please Enter Username";
+
+        break;
         default:
         break;
     }

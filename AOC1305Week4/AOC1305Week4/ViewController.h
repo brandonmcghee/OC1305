@@ -30,6 +30,7 @@
     //String for User Input for Name
     NSString *userName;
     
+    //Boolean variable for the info button
     BOOL infoOn;
 
 }
