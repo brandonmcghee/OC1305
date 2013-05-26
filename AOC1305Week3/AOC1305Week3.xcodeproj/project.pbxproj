@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		36FF3AEA17482E1D00236222 /* AOC1305Week3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOC1305Week3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36FF3AEA17482E1D00236222 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FF3AED17482E1D00236222 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		36FF3AEF17482E1D00236222 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		36FF3AF117482E1D00236222 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		36FF3AEB17482E1D00236222 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36FF3AEA17482E1D00236222 /* AOC1305Week3.app */,
+				36FF3AEA17482E1D00236222 /* testApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			);
 			name = AOC1305Week3;
 			productName = AOC1305Week3;
-			productReference = 36FF3AEA17482E1D00236222 /* AOC1305Week3.app */;
+			productReference = 36FF3AEA17482E1D00236222 /* testApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOC1305Week3/AOC1305Week3-Prefix.pch";
 				INFOPLIST_FILE = "AOC1305Week3/AOC1305Week3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = testApp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -272,7 +272,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOC1305Week3/AOC1305Week3-Prefix.pch";
 				INFOPLIST_FILE = "AOC1305Week3/AOC1305Week3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = testApp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -296,6 +296,7 @@
 				36FF3B0F17482E1E00236222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
