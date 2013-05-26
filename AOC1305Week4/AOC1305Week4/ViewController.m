@@ -28,6 +28,9 @@
     float deviceWidth           =   CGRectGetWidth([[UIScreen mainScreen] bounds]);
     float deviceHeight          =   CGRectGetHeight([[UIScreen mainScreen] bounds]);
     
+    //BOOL Variable to see if info button was already clicked
+    infoOn = FALSE;
+    
     //Date variable, formatted into a string at the end to put in alert view
     NSDate *currentDate         =   [NSDate date];
     NSDateFormatter *formatDate =   [[NSDateFormatter alloc] init];
@@ -109,7 +112,7 @@
 
 //Function the will show and format the date in an Alert Box when the "Show Date" button is clicked
 - (void)onClick:(UIButton*)button
-{
+{   
     switch (button.tag)
     {
         case 0:
@@ -119,14 +122,17 @@
         break;
             
         case 1:
+            //Hides the keyboard when login button is clicked
+            [inputName resignFirstResponder];
+            
             //Assigning value of inputName.text into userName
             userName        =       [NSString stringWithFormat:@"User: %@ has been logged in", inputName.text];
-            
+
             //Logic statement to check if userName has any input
-            if (userName.length == 0)
+            if (inputName.text == 0)
             {
                 [alertError show];
-            }else if (userName.length != 0)
+            }else if (inputName.text != 0)
             {
                 labelPEName.text = userName;
                 NSLog(@"%@",userName);
@@ -138,9 +144,15 @@
         break;
             
         case 2:
-        
-            labelCredits.text   =   @"This application was created by /nBrandon McGhee";
-        
+            if (infoOn)
+            {
+                labelCredits.text   =   @"";
+                infoOn  =   NO;
+            }else{
+                labelCredits.text   =   @"This application was created by \nBrandon McGhee";
+                infoOn =    YES;
+            }
+            
         break;
 
         default:

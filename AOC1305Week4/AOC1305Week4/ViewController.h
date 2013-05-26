@@ -29,6 +29,8 @@
 
     //String for User Input for Name
     NSString *userName;
+    
+    BOOL infoOn;
 
 }
 
