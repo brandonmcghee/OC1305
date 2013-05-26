@@ -20,9 +20,6 @@
     float deviceWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]);
     float deviceHeight = CGRectGetHeight([[UIScreen mainScreen] bounds]);
     
-    //Date
-    NSDate *currentDate = [NSDate date];
-    
     //Label for "Username:"
     UILabel *labelName = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, deviceWidth/2, 31.0f)];
     labelName.text = @"Username:";
@@ -48,6 +45,7 @@
     UIButton *btnDate = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     btnDate.frame = CGRectMake(10.0f, deviceHeight/2, 100.0f, 50.0f);
     [btnDate setTitle:@"Show Date" forState:UIControlStateNormal];
+    [btnDate addTarget:self action:@selector(showDate) forControlEvents:UIControlEventTouchUpInside];
     
     //Info Button
     UIButton *btnInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
@@ -78,4 +76,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)showDate
+{
+    //Date variable, formatted into a string at the end to put in alert view
+    NSDate *currentDate = [NSDate date];
+    NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
+    [formatDate setDateStyle:(NSDateFormatterFullStyle)];
+    [formatDate setTimeStyle:(NSDateFormatterFullStyle)];
+    NSString *stringDate = [formatDate stringFromDate:(currentDate)];
+    
+    //UIAlertView for Date
+    UIAlertView *alertDate = [[UIAlertView alloc] initWithTitle:@"Date" message:stringDate delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [alertDate show];
+}
 @end
